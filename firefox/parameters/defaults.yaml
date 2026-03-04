@@ -6,8 +6,11 @@
 values:
   pkg:
     name: firefox
+  pkg_launcher:
+    name: ''
   rootgroup: root
   config: '/etc/firefox'
+  policies: ''
   service:
     name: firefox
   subcomponent:

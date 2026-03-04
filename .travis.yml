@@ -94,7 +94,6 @@ jobs:
     #       to allow for comprehensive local testing
     #       Ref: https://github.com/saltstack-formulas/template-formula/issues/118
     #       Ref: https://github.com/saltstack-formulas/template-formula/issues/121
-    # - env: INSTANCE=default-debian-11-tiamat-py3
     # - env: INSTANCE=default-debian-10-tiamat-py3
     # - env: INSTANCE=default-debian-9-tiamat-py3
     # - env: INSTANCE=default-ubuntu-2204-tiamat-py3
@@ -107,7 +106,6 @@ jobs:
     # - env: INSTANCE=default-oraclelinux-7-tiamat-py3
     # - env: INSTANCE=default-almalinux-8-tiamat-py3
     # - env: INSTANCE=default-rockylinux-8-tiamat-py3
-    - env: INSTANCE=default-debian-11-master-py3
     - env: INSTANCE=default-debian-10-master-py3
     - env: INSTANCE=default-debian-9-master-py3
     - env: INSTANCE=default-ubuntu-2204-master-py3
@@ -127,7 +125,6 @@ jobs:
     - env: INSTANCE=default-gentoo-stage3-systemd-master-py3
     - env: INSTANCE=default-almalinux-8-master-py3
     - env: INSTANCE=default-rockylinux-8-master-py3
-    # - env: INSTANCE=default-debian-11-3004-1-py3
     # - env: INSTANCE=default-debian-10-3004-1-py3
     # - env: INSTANCE=default-debian-9-3004-1-py3
     # - env: INSTANCE=default-ubuntu-2204-3004-1-py3

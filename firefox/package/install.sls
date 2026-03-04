@@ -5,6 +5,10 @@
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- from tplroot ~ "/map.jinja" import mapdata as firefox with context %}
 
-firefox-package-install-pkg-installed:
+Install Firefox Package:
   pkg.installed:
-    - name: {{ firefox.pkg.name }}
+    - pkgs:
+      - {{ firefox.pkg.name }}
+      {%- if grains.os_family == "RedHat" %}
+      - {{ firefox.pkg_launcher.name }}
+      {%- endif %}

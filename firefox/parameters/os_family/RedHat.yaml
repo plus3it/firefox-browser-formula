@@ -12,7 +12,10 @@
 # values: {}
 ---
 values:
+  config_dir: /usr/lib64/firefox/defaults/pref/
   pkg:
-    name: firefox-redhat
-  config: /etc/firefox.conf
+    name: firefox
+  pkg_launcher:
+    name: firefox-x11
+  policies: /etc/firefox/policies/policies.json
 ...

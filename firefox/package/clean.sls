@@ -9,8 +9,12 @@
 include:
   - {{ sls_config_clean }}
 
-firefox-package-clean-pkg-removed:
+Uninstall Firefox Package:
   pkg.removed:
-    - name: {{ firefox.pkg.name }}
+    - pkgs:
+      - {{ firefox.pkg.name }}
+      {%- if grains.os_family == "RedHat" %}
+      - {{ firefox.pkg_launcher.name }}
+      {%- endif %}
     - require:
       - sls: {{ sls_config_clean }}

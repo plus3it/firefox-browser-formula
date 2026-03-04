@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
-
+#
+# This file does nothing: this iteration of the firefox browser formula
+# contents does not attempt to place any application-configuration files onto
+# the installation-target host
+#
+################################################################################
 {#- Get the `tplroot` from `tpldir` #}
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- set sls_package_install = tplroot ~ '.package.install' %}
@@ -9,20 +14,3 @@
 
 include:
   - {{ sls_package_install }}
-
-firefox-config-file-file-managed:
-  file.managed:
-    - name: {{ firefox.config }}
-    - source: {{ files_switch(['example.tmpl'],
-                              lookup='firefox-config-file-file-managed'
-                 )
-              }}
-    - mode: 644
-    - user: root
-    - group: {{ firefox.rootgroup }}
-    - makedirs: True
-    - template: jinja
-    - require:
-      - sls: {{ sls_package_install }}
-    - context:
-        firefox: {{ firefox | json }}
