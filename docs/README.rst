@@ -1,14 +1,14 @@
 .. _readme:
 
-firefox-formula
+firefox-browser-formula
 ===============
 
 |img_travis| |img_sr| |img_pc|
 
-.. |img_travis| image:: https://travis-ci.com/saltstack-formulas/firefox-formula.svg?branch=master
+.. |img_travis| image:: https://travis-ci.com/saltstack-formulas/firefox-browser-formula.svg?branch=master
    :alt: Travis CI Build Status
    :scale: 100%
-   :target: https://travis-ci.com/saltstack-formulas/firefox-formula
+   :target: https://travis-ci.com/saltstack-formulas/firefox-browser-formula
 .. |img_sr| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
    :alt: Semantic Release
    :scale: 100%
@@ -18,8 +18,7 @@ firefox-formula
    :scale: 100%
    :target: https://github.com/pre-commit/pre-commit
 
-A SaltStack formula that is empty. It has dummy content to help with a quick
-start on a new formula and it serves as a style guide.
+A SaltStack formula designed to facilitate the installation of the Firefox browser onto select host-types. As of this writing, supported hosts types only include RPM-based Linux distributions (RHEL and clones/work-alikes).
 
 .. contents:: **Table of Contents**
    :depth: 1
@@ -27,8 +26,7 @@ start on a new formula and it serves as a style guide.
 General notes
 -------------
 
-See the full `SaltStack Formulas installation and usage instructions
-<https://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
+See the full `SaltStack-Formulas’ Documentation <https://salt-formulas.readthedocs.io/en/latest/>`_.
 
 If you are interested in writing or contributing to formulas, please pay attention to the `Writing Formula Section
 <https://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html#writing-formulas>`_.
