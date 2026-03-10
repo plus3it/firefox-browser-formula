@@ -3,14 +3,18 @@
 {#- Get the `tplroot` from `tpldir` #}
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- from tplroot ~ "/map.jinja" import mapdata as firefox with context %}
-
+{%- set setup_exe = salt.pillar.get(
+    'firefox-browser:lookup:installer_uri_win',
+    '{{ firefox.pkg.install_uri }}'
+  )
+%}
 {%- set stage_loc = 'C:/temp/firefox-setup.exe' %}
 
 Download Firefox installer:
   file.managed:
     - name: '{{ stage_loc }}'
     - skip_verify: True
-    - source: '{{ firefox.pkg.install_uri }}'
+    - source: '{{ setup_exe }}'
     - makedirs: True
 
 Install Firefox application:
