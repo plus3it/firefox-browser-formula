@@ -19,3 +19,9 @@ Install Firefox application:
     - shell: powershell
     - require:
       - file: 'Download Firefox installer'
+
+Clean up Firefox installer:
+  file.absent:
+    - name: '{{ stage_loc }}'
+    - require:
+      - cmd: 'Install Firefox application'
