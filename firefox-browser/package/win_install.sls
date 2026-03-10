@@ -5,7 +5,7 @@
 {%- from tplroot ~ "/map.jinja" import mapdata as firefox with context %}
 {%- set setup_exe = salt.pillar.get(
     'firefox-browser:lookup:installer_uri_win',
-    '{{ firefox.pkg.install_uri }}'
+    firefox.pkg.install_uri
   )
 %}
 {%- set stage_loc = 'C:/temp/firefox-setup.exe' %}
