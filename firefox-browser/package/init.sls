@@ -2,4 +2,8 @@
 # vim: ft=sls
 
 include:
-  - .install
+{%- if grains.kernel == "Linux" %}
+  - .lin_install
+{%- elif grains.kernel == "Windows" %}
+  - .win_install
+{%- endif %}
