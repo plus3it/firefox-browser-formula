@@ -6,6 +6,8 @@
 values:
   pkg:
     name: firefox
+    install_uri: ''
+    uninstaller: ''
   pkg_launcher:
     name: ''
   rootgroup: root
