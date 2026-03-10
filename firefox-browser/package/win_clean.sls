@@ -6,7 +6,7 @@
 
 Unnstall Firefox application:
   cmd.run:
-    - name: '{{ firefox.pkg.uninstaller }} /S /allusers'
+    - name: '"{{ firefox.pkg.uninstaller }}" /S /allusers'
     - shell: powershell
     - onlyif:
       - cmd: 'test -f {{ firefox.pkg.uninstaller }}'
