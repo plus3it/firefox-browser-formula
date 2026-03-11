@@ -30,6 +30,7 @@ jobs:
         os_version:
           - windows-2019
           - windows-2022
+          - windows-2025
         salt_state:
           - firefox-browser
         salt_pillar_root:
