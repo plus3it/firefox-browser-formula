@@ -7,6 +7,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  linux:
+    uses: plus3it/actions-workflows/.github/workflows/test-salt-linux.yml@00bdf2c02c2bb252dc7ba7f74816ac8359aa6693
+    strategy:
+      matrix:
+        os_version:
+          - 8
+          - 9
+        salt_state:
+          - firefox-browser
+        salt_pillar_root:
+          - ./tests/pillar/test-linux-main
+    with:
+      salt-os-version: ${{ matrix.os_version }}
+      salt-state: ${{ matrix.salt_state }}
+      salt-pillar-root: ${{ matrix.salt_pillar_root }}
+
   windows:
     uses: plus3it/actions-workflows/.github/workflows/test-salt-windows.yml@269d875599c92395f7fa99cab43edc1820798e61
     strategy:
